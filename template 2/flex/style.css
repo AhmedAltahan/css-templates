@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/* ******************************************************** */
+
+header {
+    width: 100%;
+    height: 140px;
+    background-color: #ddd;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+header span {
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ******************************************************** */
+
+.parent {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.column20 , .column60 {
+    background-color: #ddd;
+    text-align: center;
+    height: 518px;
+    position: relative;
+}
+
+.column20 {
+    flex: 20%;
+    margin: 0 5px;
+}
+
+.column60 {
+    flex: 60%;
+} 
+
+div[class*=column] span {
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ******************************************************** */
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color: #ddd;
+    position: relative;
+    margin-top: 10px;
+}
+
+footer span {
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ******************************************************** */
+
+@media screen and (max-width : 749.6px) {
+
+    .parent {
+        
+        flex-flow: row wrap;
+        
+    }
+
+    .column20  , .column60 {
+        flex: 100%;
+        margin: 5px 5px;
+        
+    }
+}

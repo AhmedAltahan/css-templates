@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/* ******************************************************** */
+
+div.container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header' 
+        'left middle middle middle middle right ' 
+        'footer footer footer footer footer footer ';
+    gap: 5px;
+}
+
+/* ******************************************************** */
+
+header {
+    grid-area: header;
+    height: 140px;
+    background-color: #ddd;
+    position: relative;
+}
+
+header span {
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ******************************************************** */
+
+div.container > div {
+    background-color: #ddd;
+    position: relative;
+    height: 518px;
+    text-align: center;
+}
+
+div.container > div span {
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.left {
+    grid-area: left;
+    margin-left: 5px;
+}
+
+div.middle {
+    grid-area: middle;
+}
+
+div.right {
+    grid-area: right;
+    margin-right: 5px;
+}
+
+/* ******************************************************** */
+
+footer {
+    grid-area: footer;
+    height: 50px;
+    background-color: #ddd;
+    position: relative;
+}
+
+footer span {
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ******************************************************** */
+
+@media screen and (max-width : 749.6px) {
+    div.container {
+        grid-template-areas:
+            'header header header header header header' 
+            'left left left left left left'
+            'middle middle middle middle middle middle'
+            'right right right right right right' 
+            'footer footer footer footer footer footer';
+    }
+    
+}
+
+
